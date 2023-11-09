@@ -1169,11 +1169,10 @@ html {
 
 .form-error {
     /*float: right;*/
-    font-size: 13px;
-    background: var(--rojo);
-    color: var(--blanco);
-    padding: 18px;
+    font-size: 15px;
+    color: #fff;
     width: 100%;
+
   }
 
 
