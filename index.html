@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>forty</title>
 
+
+
+     <!--meta descri-->
+
+
+     <meta name="description" content="Proyecto Forty">
+
+     <!--prefetch-->
+    
+     <link rel="prefetch" href="index.html" as="document"> <!--carga mas rapido la pagina con mas importancia-->
+
+
+    <!--favicon-->
+
+    <link rel="icon" type="png" href="img/codefavicon.png">
+
     <!--font awesome-->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -19,6 +35,10 @@
     <!--css-->
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/style.css" as="style">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="css/normalize.css" as="style">
 
 
     <!-- jQuery -->
@@ -31,6 +51,11 @@
 
     <!-- Mis Scripts -->
     <script type="text/javascript" src="js/main.js"></script>
+
+     <!--plugin de validacion -->
+
+    
+     <script src="js/form-validator/jquery.form-validator.min.js"></script>
 
 </head>
 
@@ -47,8 +72,8 @@
 
             <div class="contenedor-infoBanner">
                 <p class="parrafo-infoBanner">
-                    A responsive site template designed by HTML5 UP <br>
-                    and released under the Creative Commons.
+                    A paksleidori spal lapemsir spelaisj op HTML5 OP <br>
+                    sle lspeifns opsle fop paoeksir opslekd.
                 </p>
 
                 <a href="#contenedor-fotos" class="boton">Iniciemos <i class="bi bi-arrow-right flecha"></i></a>
@@ -203,18 +228,18 @@
 
     <section class="contenedor-formDatos">
 
-        <form action="#" class="formulario">
+        <form action="#" class="formulario" id="form_contact">
             <div class="div-input780px">
                 <label class="nombre" for="nombre">Nombre</label>
-                <input type="text" id="nombre" placeholder="Escriba su nombre" required>
+                <input type="text" id="nombre" placeholder="Escriba su nombre" data-validation="alphanumeric">
     
                 <label class="email" for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Escriba su correo" required>
+                <input type="email" name="email" id="email" placeholder="Escriba su correo"  data-validation="alphanumeric">
             </div>
             
 
             <label class="mensaje" for="mensaje">Mensaje</label>
-            <textarea name="" id="mensaje" cols="38" rows="9" required></textarea>
+            <textarea name="" id="mensaje" cols="38" rows="9" data-validation="alphanumeric"></textarea>
 
             <div class="cont-botones">
                 <input type="submit" value="Enviar" id="enviar">
@@ -283,6 +308,8 @@
         <div class="contenedor-texto">
             <p>&copy; Derechos reservados Orlando Alonzo Jorge</p>
         </div>
+
+        <a class="subir" href="#"><i class="bi bi-arrow-bar-up"></i></a>
 
     </footer>
 

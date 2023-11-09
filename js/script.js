@@ -44,7 +44,39 @@ iconosFooter.forEach( function(iconos){
     });
        
 
-})
+});
+
+/* notificacion */
+
+    
+    
+
+
+document.addEventListener('click', () => {
+    Notification.requestPermission()
+       .then( resultado => console.log(`el resultado es: ${resultado}`))//maneras diferentes de mostrar el resultado
+       .catch( denegado => console.log('el resutlado es: ', denegado))
+
+});
+
+
+//crea una nueva notificacion con el new y apliica el codiigo de adentro
+setTimeout(() => {
+    if(Notification.permission == 'granted'){
+        new Notification('Notificacion', {
+            icon:'img/codefavicon.png',
+            body:'Bienvenido/a al proyecto Forty'
+        })
+    
+    }
+},2000);
+
+
+
+
+
+
+
 
 
 
